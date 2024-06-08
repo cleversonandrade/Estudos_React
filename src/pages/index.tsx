@@ -2,12 +2,16 @@
 const nome = 'Cleverson';
 const curso = 'React com Typescript';
 const instituicao = 'CFB - Cursos.';
+const logo = 'Logo';
 
 const Topo = () => {
   return(
-    <div className="flex-col border-none h-32 bg-blue-300 ">
-      <div>{nome}</div>
-      <div>{curso}</div>
+    <div className="flex justify-between items-center h-32 bg-blue-300">
+      <div>{logo}</div>
+      <div className="flex flex-col justify-center items-center"> 
+        <div className="text-3xl">{nome}</div>
+        <div>{curso}</div>
+      </div>
       <div>{instituicao}</div>
     </div>
   );
