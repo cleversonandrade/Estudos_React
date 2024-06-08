@@ -1,6 +1,14 @@
 import Card from "@/components/Card";
 import Topo from "@/components/Topo";
 
+const calc_desc = (v:number, d:number) => {
+  return v-d
+}
+
+const calc_desc_2 = (v:number, d:number) => {
+  return v-(d/2)
+}
+
 export default function Home() {
   return (
     <div>
@@ -10,10 +18,10 @@ export default function Home() {
         <div>TypeScrip</div>
       </div>
       <div className="flex justify-center gap-3">
-        <Card produto={'Mouse'} valor={'R$49,90'}/>
-        <Card produto={'Teclado'} valor={'R$69,90'}/>
-        <Card produto={'Monitor'} valor={'R$499,90'}/>
-        <Card produto={'Placa de vídeo'} valor={'R$899,90'}/>
+        <Card produto={'Mouse'} valor={49.90} desconto={5} funcao={calc_desc} />
+        <Card produto={'Teclado'} valor={69.90} desconto={10.00} funcao={calc_desc} />
+        <Card produto={'Monitor'} valor={499.90} desconto={50.00} funcao={calc_desc_2} />
+        <Card produto={'Placa de vídeo'} valor={899.90} desconto={80.00} funcao={calc_desc_2} />
       </div>
     </div>
   );
