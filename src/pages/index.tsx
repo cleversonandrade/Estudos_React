@@ -1,22 +1,5 @@
-
-const nome = 'Cleverson';
-const curso = 'React com Typescript';
-const instituicao = 'CFB - Cursos.';
-const logo = 'Logo';
-
-const Topo = () => {
-  return(
-    <div className="flex justify-between items-center h-32 bg-blue-300">
-      <div>{logo}</div>
-      <div className="flex flex-col justify-center items-center"> 
-        <div className="text-3xl">{nome}</div>
-        <div>{curso}</div>
-        <div style={{ color: '#f00', backgroundColor: '#bbb' }}>React</div>
-      </div>
-      <div>{instituicao}</div>
-    </div>
-  );
-}
+import Card from "@/components/Card";
+import Topo from "@/components/Topo";
 
 export default function Home() {
   return (
@@ -25,6 +8,12 @@ export default function Home() {
       <div style={testecss}>
         <div>Curso de React</div>
         <div>TypeScrip</div>
+      </div>
+      <div className="flex justify-center gap-3">
+        <Card produto={'Mouse'} valor={'R$49,90'}/>
+        <Card produto={'Teclado'} valor={'R$69,90'}/>
+        <Card produto={'Monitor'} valor={'R$499,90'}/>
+        <Card produto={'Placa de vídeo'} valor={'R$899,90'}/>
       </div>
     </div>
   );
