@@ -7,7 +7,7 @@ interface CardPros {
 
 const Card = (props:CardPros) => {
     return(
-        <div className={`flex flex-col border-4 
+        <div className={`flex  justify-center flex-col border-4 
         ${props.desconto > 0 
         ?' border-red-700':
           'border-blue-700'} 
