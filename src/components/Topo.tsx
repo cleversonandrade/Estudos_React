@@ -1,20 +1,28 @@
-const nome = 'Cleverson';
-const curso = 'React com Typescript';
-const instituicao = 'CFB - Cursos.';
+import Link from "next/link";
+
+const nomeLoja = 'CPU IMPORTS';
 const logo = 'Logo';
+const subtitulo = 'Visite nossa loja';
 
 const Topo =() => {
-    return(
-        <div className="flex justify-between items-center h-32 bg-blue-300">
+  return(
+      <div className="flex flex-col justify-between items-center h-32 bg-blue-300">
         <div>{logo}</div>
-        <div className="flex flex-col justify-center items-center"> 
-          <div className="text-3xl">{nome}</div>
-          <div>{curso}</div>
-          <div style={{ color: '#f00', backgroundColor: '#bbb' }}>React</div>
-        </div>
-        <div>{instituicao}</div>
+        <div className='flex flex-col justify-center bg-zinc-300 h-28'>{nomeLoja}</div>
+        <div>{subtitulo}</div>
+        <nav>
+          <Link href={'/'}>
+              Home
+          </Link>
+          <Link href={'/produtos/produtos'}>
+              Produtos
+          </Link>
+          <Link href={'/teste/teste'}>
+              Teste
+          </Link>
+        </nav>
       </div>
-    )
+  )
 }
 
 export default Topo;

@@ -1,3 +1,5 @@
+import Topo from "./Topo";
+
 interface CardPros {
     produto: string,
     valor: number,
