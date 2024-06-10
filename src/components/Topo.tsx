@@ -10,7 +10,7 @@ const Topo =() => {
         <div>{logo}</div>
         <div className='flex flex-col justify-center bg-zinc-300 h-28'>{nomeLoja}</div>
         <div>{subtitulo}</div>
-        <nav>
+        <nav className="flex gap-5">
           <Link href={'/'}>
               Home
           </Link>
@@ -19,6 +19,9 @@ const Topo =() => {
           </Link>
           <Link href={'/teste/teste'}>
               Teste
+          </Link>
+          <Link href={'/usestate/usestate'}>
+              State
           </Link>
         </nav>
       </div>

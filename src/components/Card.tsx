@@ -23,6 +23,7 @@ const Card = (props:CardPros) => {
                 </div>
             )}
             <div>{props.children[0]}</div>   
+            <div>{props.children[1]}</div>
         </div>
     );
 }
