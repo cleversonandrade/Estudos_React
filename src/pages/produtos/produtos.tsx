@@ -2,7 +2,6 @@ import Card from "@/components/Card";
 import Topo from "@/components/Topo";
 import { useRouter } from "next/router";
 
-
 const produtos = [
     {
       id: 1,
@@ -65,7 +64,10 @@ const ProdutosPagina = () => {
                     if(e.disponivel) {
                         return(
                             // eslint-disable-next-line react/jsx-key
-                            <Card key={e.id} produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={calc_desc} />
+                            <Card key={e.id} produto={e.produto} valor={e.valor} desconto={e.desconto} funcao={calc_desc}>
+                              <div>Teste children</div>
+                              <div>Ainda é um teste</div>
+                            </Card>
                         )}  
                     })
                 }

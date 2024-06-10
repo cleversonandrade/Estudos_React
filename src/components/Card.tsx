@@ -1,10 +1,9 @@
-import Topo from "./Topo";
-
 interface CardPros {
     produto: string,
     valor: number,
     desconto: number,
-    funcao: any
+    funcao: any,
+    children: any
 }
 
 const Card = (props:CardPros) => {
@@ -22,7 +21,8 @@ const Card = (props:CardPros) => {
                     <div>Desconto: R${props.desconto}</div>
                     <div>Valor total: R${props.funcao(props.valor, props.desconto)}</div>
                 </div>
-            )}   
+            )}
+            <div>{props.children[0]}</div>   
         </div>
     );
 }
