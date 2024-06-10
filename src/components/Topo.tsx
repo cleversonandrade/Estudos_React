@@ -23,6 +23,9 @@ const Topo =() => {
           <Link href={'/usestate/usestate'}>
               State
           </Link>
+          <Link href={'/carro/carro'}>
+              Carro
+          </Link>
         </nav>
       </div>
   )
