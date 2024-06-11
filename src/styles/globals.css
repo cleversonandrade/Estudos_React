@@ -8,3 +8,9 @@
   
 }
 
+.btnPadrao {
+    display: flex;
+    background-color: #ddd;
+    padding: 5px;
+    border-radius: 5px;
+}

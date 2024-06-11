@@ -1,19 +1,30 @@
 import { useState } from "react";
+import DisplayState from "@/components/DisplayState";
 
 export default function usestate() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [cont, setCont] = useState<number>(0);
-    let c = cont
-    c++
 
-    function add() {
+    function adicionar() {
+        let c = cont
+        c++
+        setCont(c)
+    }
+
+    function subtrair() {
+        let c = cont
+        c--
         setCont(c)
     }
 
     return(
-        <div className={'flex flex-col text-center bg-zinc-600  h-1/2'}>
-            quantidade: <div>{cont}</div>
-            <button onClick={add}>Adicionar</button>
+        <div>
+            quantidade: 
+            <DisplayState valor={cont}></DisplayState>
+            <div className="flex gap-2">
+                <button className="btnPadrao" onClick={adicionar}>Adicionar</button>
+                <button className="btnPadrao" onClick={subtrair}>Subtrair</button>
+            </div>
         </div>
     )
 }
