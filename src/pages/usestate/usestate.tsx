@@ -5,23 +5,10 @@ export default function usestate() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [cont, setCont] = useState<number>(0);
 
-    
-    function adicionar() {
-        let c = cont
-        c++
-        setCont(c)
-    }
-
-    function subtrair() {
-        let c = cont
-        c--
-        setCont(c)
-    }
-
     return(
         <div>
-            quantidade: 
-            <DisplayState valor={cont} funcaoAdicionar={adicionar} funcaoSubtrair={subtrair}></DisplayState>
+            Adicione ao seu carrinho: 
+            <DisplayState valor={cont} funcaoValor={setCont}></DisplayState>
         </div>
     )
 }
