@@ -14,7 +14,7 @@ const Topo =() => {
           <Link href={'/'}>
               Home
           </Link>
-          <Link href={{pathname:'/produtos/produtos', query:{nome:'Cleverson', curso:'React Next'}}}>
+          <Link href={{pathname:'/produtos/produtos', query:{nome:'Estudos', curso:'React Next'}}}>
               Produtos
           </Link>
           <Link href={'/teste/teste'}>
@@ -28,6 +28,9 @@ const Topo =() => {
           </Link>
           <Link href={'/inputs/inputs'}>
               Inputs
+          </Link>
+          <Link href={'/carro2/carro2'}>
+              Carros 2
           </Link>
         </nav>
       </div>
