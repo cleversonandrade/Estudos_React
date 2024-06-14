@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 import Topo from "@/components/Topo";
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import Globais from "@/components/Globais";
 
 
 const cursos = ['','HTML','CSS','JavaScript','React','Typescript','Node',]
@@ -29,6 +30,12 @@ export default function Inputs() {
     const [nome, setNome] = useState<string>('');
     const [curso, setCurso] = useState<string>(cursos[0]);
 
+   useEffect(() => {
+    Globais.curso = 'React'
+    Globais.ano = '2025'
+    Globais.nome= 'Kauã'
+   },[])
+
     function fCursos(){
         return cursos.map((e:any) => {
             return <option value={e}>{e}</option>
@@ -56,6 +63,9 @@ export default function Inputs() {
         </div>
         <div>Nome digitado: {nome}</div>
         <div>Curso: {curso}</div>
+        <div>{Globais.nome}</div>
+        <div>{Globais.curso}</div>
+        <div>{Globais.ano}</div>
       </div>
     )
 }
