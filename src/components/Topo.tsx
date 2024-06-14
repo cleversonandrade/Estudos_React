@@ -35,6 +35,9 @@ const Topo =() => {
           <Link href={'/carro2/carro2'}>
               Carros 2
           </Link>
+          <Link href={'/filtragem/filtragem'}>
+              Filtragem
+          </Link>
         </nav>
       </div>
   )
